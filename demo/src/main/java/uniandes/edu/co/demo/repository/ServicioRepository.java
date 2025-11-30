@@ -17,7 +17,7 @@ public interface ServicioRepository extends MongoRepository<Servicio, String> {
     List<Servicio> buscarServiciosPorConductor(String conductorId);
 
     @Query("{ 'ciudadId': ?0, 'horaInicio': { $gte: ?1, $lte: ?2 } }")
-    List<Servicio> buscarServiciosPorCiudadYRangoFechas(String ciudadId, Date fechaInicio, Date fechaFin);
+    List<Servicio> buscarServiciosPorCiudadYRangoFechas(String ciudadId, String fechaInicio, String fechaFin);
 
     @Query("{ 'tipoServicio': ?0 }")
     List<Servicio> buscarServiciosPorTipo(String tipoServicio);

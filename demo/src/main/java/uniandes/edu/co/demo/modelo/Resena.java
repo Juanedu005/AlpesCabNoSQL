@@ -18,14 +18,14 @@ public class Resena {
 
     private int puntuacion;    // 0–5
     private String comentario;
-    private Date fecha;
+    private String fecha;
 
     public Resena() {
     }
 
     public Resena(String id, String tipo, String servicioId,
                   String autorId, String receptorId,
-                  int puntuacion, String comentario, Date fecha) {
+                  int puntuacion, String comentario, String fecha) {
         this.id = id;
         this.tipo = tipo;
         this.servicioId = servicioId;
@@ -92,11 +92,11 @@ public class Resena {
         this.comentario = comentario;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 }

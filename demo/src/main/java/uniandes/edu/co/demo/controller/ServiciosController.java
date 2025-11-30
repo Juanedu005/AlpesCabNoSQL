@@ -106,9 +106,7 @@ public class ServiciosController {
             @RequestParam("fechaInicio") @NonNull String fechaInicio,
             @RequestParam("fechaFin") @NonNull String fechaFin) {
         try {
-            Date inicio = Date.from(Instant.parse(fechaInicio));
-            Date fin = Date.from(Instant.parse(fechaFin));
-            List<Servicio> servicios = servicioRepository.buscarServiciosPorCiudadYRangoFechas(ciudadId, inicio, fin);
+            List<Servicio> servicios = servicioRepository.buscarServiciosPorCiudadYRangoFechas(ciudadId, fechaInicio, fechaFin);
             return ResponseEntity.ok(servicios);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();

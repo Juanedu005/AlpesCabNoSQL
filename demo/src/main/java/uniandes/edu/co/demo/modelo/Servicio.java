@@ -1,6 +1,6 @@
 package uniandes.edu.co.demo.modelo;
 
-import java.util.Date;
+
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -23,13 +23,13 @@ public class Servicio {
 
     private Puntos puntos;
 
-    private Date horaInicio;
-    private Date horaFin;
+    private String horaInicio;
+    private String horaFin;
     private int duracionMinutos;
     private double distanciaKm;
     private double tarifaPorKm;
     private double costoTotal;
-    private String estado;         // CREADO, EN_CURSO, FINALIZADO, CANCELADO
+    private String estado;         
 
     private DetalleDomicilio detalleDomicilio;
     private DetalleMercancias detalleMercancias;
@@ -121,19 +121,19 @@ public class Servicio {
         this.puntos = puntos;
     }
 
-    public Date getHoraInicio() {
+    public String getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(Date horaInicio) {
+    public void setHoraInicio(String horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public Date getHoraFin() {
+    public String getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(Date horaFin) {
+    public void setHoraFin(String horaFin) {
         this.horaFin = horaFin;
     }
 
